@@ -1,16 +1,10 @@
-from selenium import webdriver
-from lxml import html
-from bs4 import BeautifulSoup as bsoup
-import svg_dict
+from util import svg_dict
+from web_fetch import fetch
 
-options = webdriver.ChromeOptions()
-options.add_argument('headless')
+# Retrieve plain HTML source
+soup = fetch.get_html_txt_headless('https://sudoku.com/medium/')
+fetch.close_html_txt_headless()
 
-# start chrome browser
-browser = webdriver.Chrome(options=options)
-browser.get('https://sudoku.com/medium/')
-html_cont = str(browser.page_source)
-soup = bsoup(html_cont, features='html.parser')
 # print(soup.prettify())
 num_list = []
 div_id_game = soup.find_all("path", attrs={"fill": "#344861", "fill-rule": "evenodd" })
@@ -22,4 +16,3 @@ number_retrieved = [svg_dict.get_svg_to_num(i) for i in num_list[-9:]]
 cell_pre_exist_number = [svg_dict.get_svg_to_num(i) for i in num_list[0:-9]]
 print(cell_pre_exist_number)
 print(len(cell_pre_exist_number))
-browser.quit()
