@@ -3,11 +3,11 @@ import random as ran
 
 
 sudoku_array = []
-ran.seed(5)
+ran.seed()
 dump_num = 0
 
 
-def sudoku_init():
+def sudoku_gen_init():
     temp_matrix = []
     dump_num = ran.randint(1, 9)
     for i in range(0, 9):
@@ -28,10 +28,11 @@ def sudoku_init():
     temp = temp[1:] + [temp[0]]
     temp_matrix = np.vstack((temp_matrix, temp, temp[3:] + temp[0:3], temp[6:] + temp[0:6]))
 
-    return temp_matrix
+    return temp_matrix # generated sudoku field
 
 
-def getmap_sudoku_field(sudoku_field):
+# sudoku dict key:0-9, values: rows
+def sudoku_gen_getmap(sudoku_field):
     sudoku_row_map = {}
     try:
         assert np.shape(sudoku_field) == (9, 9)
@@ -43,5 +44,18 @@ def getmap_sudoku_field(sudoku_field):
         sudoku_row_map[i] = sudoku_field[i, :]
     return sudoku_row_map
 
-test = sudoku_init()
-print([str(getmap_sudoku_field(test)[i]) + ' \n' for i in getmap_sudoku_field(test)])
+
+# print generated sudoku
+def sudoku_gen_print(sudoku_field):
+    try:
+        assert np.shape(sudoku_field) == (9, 9)
+    except AssertionError:
+        raise Exception('Input Sudoku is not of 9 by 9 in size')
+        return 0
+    print("\n".join([str(sudoku_gen_getmap(sudoku_field)[i]) for i in sudoku_gen_getmap(sudoku_field)]))
+    return 1
+
+
+sudoku_gen_print(sudoku_gen_init())
+
+
