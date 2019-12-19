@@ -3,7 +3,7 @@ import random as ran
 
 
 sudoku_array = []
-ran.seed()
+ran.seed(0)
 dump_num = 0
 
 
@@ -54,8 +54,5 @@ def sudoku_gen_print(sudoku_field):
         return 0
     print("\n".join([str(sudoku_gen_getmap(sudoku_field)[i]) for i in sudoku_gen_getmap(sudoku_field)]))
     return 1
-
-
-sudoku_gen_print(sudoku_gen_init())
 
 
