@@ -2,13 +2,16 @@ import numpy as np
 import random as ran
 
 
-sudoku_array = []
+
 ran.seed(0)
 dump_num = 0
 
 
 def sudoku_gen_init():
-    temp_matrix = []
+    temp_matrix = np.zeros((1, 9))
+    temp = np.zeros((1, 9))
+    sudoku_array = []
+
     dump_num = ran.randint(1, 9)
     for i in range(0, 9):
         while sudoku_array.__contains__(dump_num) and len(sudoku_array) < 9:
