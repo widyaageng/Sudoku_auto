@@ -2,7 +2,7 @@ import numpy as np
 from train_resource import sudoku_gen as sgen
 
 
-def sudoku_batch100_gen_init(concat_sudoku):
+def sudoku_test10_gen_init(concat_sudoku):
     concat_sudoku = np.reshape(concat_sudoku, (9, 9, 1))
     try:
         assert np.shape(concat_sudoku) == (9, 9, 1)
