@@ -4,7 +4,7 @@ from train_resource import sudoku_gen as sgen
 
 # Generating 10 completed test sudoku matrices
 def sudoku_test10_gen_init(concat_sudoku):
-    concat_sudoku = np.reshape(concat_sudoku, (9, 9, 1))
+    concat_sudoku = concat_sudoku[:, :, np.newaxis]
     try:
         assert np.shape(concat_sudoku) == (9, 9, 1)
     except AssertionError:
@@ -13,6 +13,7 @@ def sudoku_test10_gen_init(concat_sudoku):
 
     for i in range(0, 9):
         temp_sudoku = sgen.sudoku_gen_init()
-        temp_sudoku = np.reshape(temp_sudoku, (9, 9, 1))
-        concat_sudoku = np.concatenate((concat_sudoku, temp_sudoku), axis=2)
+        temp_sudoku = temp_sudoku[:, :, np.newaxis]
+        concat_sudoku = np.dstack((concat_sudoku, temp_sudoku))
     return concat_sudoku
+
