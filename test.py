@@ -1,10 +1,12 @@
-from test_resources import sudoku_test10_gen as stest10
+from util import sudokufy
 from train_resource import sudoku_gen as sgen
+from test_resources import sudoku_test10_drop_number as testdrop10
+import random
 
 # print(fetch.get_html_txt_headless('https://github.com/widyaageng/Sudoku_auto'))
 
-dummy = sgen.sudoku_gen_init()
-test10 = stest10.sudoku_test10_gen_init(dummy)
-print(test10.shape)
-print(test10[:, :, 0])
-print(test10[:, :, 1])
+random.seed(0)
+testfield = sgen.sudoku_gen_init()
+print(testfield)
+testfield = testdrop10.sudoku_drop_cell(testfield, 40)
+print(testfield)
