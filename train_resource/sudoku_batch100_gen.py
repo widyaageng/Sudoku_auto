@@ -1,5 +1,5 @@
 import numpy as np
-from solution_resource import sudoku_gen as sgen
+from train_resource import sudoku_gen as sgen
 
 
 def sudoku_batch100_gen_init(concat_sudoku):
