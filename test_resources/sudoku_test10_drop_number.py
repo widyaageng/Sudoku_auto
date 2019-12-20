@@ -1,11 +1,8 @@
-import numpy as np
 import random
-from test_resources import sudoku_test10_gen
-from train_resource import sudoku_gen
 
 random.seed(0)
 
-
+# Making test puzzle for 10 test sudoku fields
 def sudoku_drop_cell(sudoku_field, drop_cell):
     try:
         assert(0 <= drop_cell <= 81)
@@ -20,12 +17,3 @@ def sudoku_drop_cell(sudoku_field, drop_cell):
     for i in empty_idx:
         sudoku_field[divmod(i, 9)[0], divmod(i, 9)[1], :] = 0
     return sudoku_field
-
-
-test_sud = sudoku_gen.sudoku_gen_init()
-print(test_sud)
-test_sud = sudoku_test10_gen.sudoku_test10_gen_init(test_sud)
-print(test_sud)
-# print(test_sud[:, :, 0])
-# test_sud = sudoku_drop_cell(test_sud, 40)
-# print(test_sud)
