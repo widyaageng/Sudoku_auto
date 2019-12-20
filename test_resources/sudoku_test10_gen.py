@@ -2,6 +2,7 @@ import numpy as np
 from train_resource import sudoku_gen as sgen
 
 
+# Generating 10 completed test sudoku matrices
 def sudoku_test10_gen_init(concat_sudoku):
     concat_sudoku = np.reshape(concat_sudoku, (9, 9, 1))
     try:
@@ -14,7 +15,4 @@ def sudoku_test10_gen_init(concat_sudoku):
         temp_sudoku = sgen.sudoku_gen_init()
         temp_sudoku = np.reshape(temp_sudoku, (9, 9, 1))
         concat_sudoku = np.concatenate((concat_sudoku, temp_sudoku), axis=2)
-
-
-
     return concat_sudoku
