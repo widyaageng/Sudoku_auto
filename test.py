@@ -1,11 +1,10 @@
-from web_fetch import fetch
-from web_fetch import sudoku_extract
+from test_resources import sudoku_test10_gen as stest10
 from train_resource import sudoku_gen as sgen
-from train_resource import sudoku_batch100_gen as sgen100
 
 # print(fetch.get_html_txt_headless('https://github.com/widyaageng/Sudoku_auto'))
 
-train_data = sgen100.sudoku_batch100_gen_init(sgen.sudoku_gen_init())
-print(train_data.shape)
-print(train_data[:, :, 0])
-print(train_data[:, :, 99])
+dummy = sgen.sudoku_gen_init()
+test10 = stest10.sudoku_test10_gen_init(dummy)
+print(test10.shape)
+print(test10[:, :, 0])
+print(test10[:, :, 1])
