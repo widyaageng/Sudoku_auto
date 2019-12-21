@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="67c3220d-ad10-42c2-8741-d87567d1fa2e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+    <list default="true" id="67c3220d-ad10-42c2-8741-d87567d1fa2e" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Sudoku_auto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sudoku_auto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/solution_resource/sudoku_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution_resource/sudoku_gen.py" afterDir="false" />
+>>>>>>> cdda113b9d6dece0a1e98bc18413e9ba2080f478
+    </list>
+>>>>>>> 7dd6792c08c912647cd0b4ffb35049c8448ee89f
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+=======
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
@@ -69,6 +85,7 @@
       </file>
     </leaf>
   </component>
+>>>>>>> cdda113b9d6dece0a1e98bc18413e9ba2080f478
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -85,28 +102,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/svg_to_num_map.py" />
-        <option value="$PROJECT_DIR$/svg_dict.py" />
-        <option value="$PROJECT_DIR$/web_fetch/web_options_constructor.py" />
-        <option value="$PROJECT_DIR$/web_fetch/fetch.py" />
-        <option value="$PROJECT_DIR$/sudoPageExtract.py" />
-        <option value="$PROJECT_DIR$/sudoku_row_extract.py" />
-        <option value="$PROJECT_DIR$/web_fetch/sudoku_row_extract.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/solution_resource/sudoku_gen.py" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="507" />
     <option name="y" value="158" />
     <option name="width" value="1044" />
     <option name="height" value="876" />
   </component>
+  <component name="ProjectId" id="1V9zb3lgLfTowkYbJMp07ISvIPt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+<<<<<<< HEAD
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+=======
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -135,8 +144,11 @@
         </subPane>
       </pane>
     </panes>
+>>>>>>> cdda113b9d6dece0a1e98bc18413e9ba2080f478
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -154,6 +166,9 @@
       <recent name="C:\Users\ageng\PycharmProjects\Sudoku_auto\util" />
     </key>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Python.test">
+=======
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -167,6 +182,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.sudoku_gen">
+>>>>>>> cdda113b9d6dece0a1e98bc18413e9ba2080f478
     <configuration name="sudoPageExtract" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Sudoku_auto" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,7 +204,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+    <configuration name="sudoku_extract" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
     <configuration name="sudoku_gen" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> cdda113b9d6dece0a1e98bc18413e9ba2080f478
       <module name="Sudoku_auto" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -196,11 +216,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_fetch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_fetch/sudoku_extract.py" />
+=======
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solution_resource" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solution_resource/sudoku_gen.py" />
+>>>>>>> cdda113b9d6dece0a1e98bc18413e9ba2080f478
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,11 +304,24 @@
       <list>
         <item itemvalue="Python.sudoku_gen" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.sudoku_row_extract" />
         <item itemvalue="Python.sudoPageExtract" />
+        <item itemvalue="Python.sudoku_extract" />
+        <item itemvalue="Python.sudoku_row_extract" />
         <item itemvalue="Python.svg_dict" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -295,6 +336,29 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+  <component name="WindowStateProjectService">
+    <state width="1379" height="206" key="GridCell.Tab.0.bottom" timestamp="1576687548124">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state width="1379" height="206" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1576687548124" />
+    <state width="1379" height="206" key="GridCell.Tab.0.center" timestamp="1576687548123">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state width="1379" height="206" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1576687548123" />
+    <state width="1379" height="206" key="GridCell.Tab.0.left" timestamp="1576687548123">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state width="1379" height="206" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1576687548123" />
+    <state width="1379" height="206" key="GridCell.Tab.0.right" timestamp="1576687548124">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state width="1379" height="206" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1576687548124" />
+    <state x="397" y="170" key="SettingsEditor" timestamp="1576680196136">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="397" y="170" key="SettingsEditor/0.23.1792.1017@0.23.1792.1017" timestamp="1576680196136" />
+=======
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
@@ -421,5 +485,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> cdda113b9d6dece0a1e98bc18413e9ba2080f478
   </component>
 </project>
