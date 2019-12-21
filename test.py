@@ -15,4 +15,3 @@ test_data = sudoku_test10_gen.sudoku_test10_gen_init(test_data)
 print(test_data[:, :, 1])
 test_data = sudoku_test10_drop_number.sudoku_drop_cell(test_data, drop_cell=10)
 print(test_data[:, :, 1])
-
