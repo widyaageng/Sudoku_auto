@@ -48,8 +48,8 @@ class LSTMCell:
         self.activated_input_it = activated_input_it
         self.activated_output_ot = activated_output_ot
 
-    def dim_check(wrapped_function):
-        def check_dim(self, some_function):
+    def dim_check(self, wrapped_function):
+        def check_dim(some_function):
             try:
                 assert (np.shape(some_function(self)[1])[1] == np.shape(self.current_input)[0])
                 assert (np.shape(some_function(self)[1])[2] == np.shape(self.previous_hidden)[0])
