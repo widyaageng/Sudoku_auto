@@ -2,6 +2,14 @@ import numpy as np
 
 
 class LSTMCell:
+    #
+    # # utilitites to determine the parameter type
+    # weight_callname_dict = {
+    #     0: 'forget',
+    #     1: 'input',
+    #     2: 'output'
+    # }
+
     def __init__(
             self,
             forget_input_weight_wf,
@@ -40,30 +48,28 @@ class LSTMCell:
         self.activated_input_it = activated_input_it
         self.activated_output_ot = activated_output_ot
 
-
-
-
     def dim_check(wrapped_function):
-        def check_dim(self):
+        def check_dim(self, some_function):
             try:
-                assert (np.shape(self.forget_input_weight_wf)[1] == np.shape(self.current_input)[0])
-                assert (np.shape(self.forget_hidden_weight_uf)[1] == np.shape(self.previous_hidden)[0])
-                assert (np.shape(self.forget_bias_bf)[1] == np.shape(self.forget_input_weight_wf)[0])
+                assert (np.shape(some_function(self)[1])[1] == np.shape(self.current_input)[0])
+                assert (np.shape(some_function(self)[1])[2] == np.shape(self.previous_hidden)[0])
+                assert (np.shape(some_function(self)[1])[3] == np.shape(some_function(self)[1])[0])
                 wrapped_function
             except AssertionError:
-                print('Dimension mismatch in \'forget\' constructor!')
-        return check_dim()
+                print('Dimension mismatch in %s constructor!' % some_function[0])
+
+        return check_dim(wrapped_function)
 
     @dim_check
     def get_forget_weight(self):
-        return self.forget_input_weight_wf, self.forget_hidden_weight_uf, self.forget_bias_bf
+        return 'forget', self.forget_input_weight_wf, self.forget_hidden_weight_uf, self.forget_bias_bf
 
     @dim_check
     def get_input_weight(self):
-        return self.input_input_weight_wi, self.input_hidden_weight_ui, self.input_bias_bi
+        return 'input', self.input_input_weight_wi, self.input_hidden_weight_ui, self.input_bias_bi
 
     @dim_check
     def get_output_weight(self):
-        return self.output_input_weight_wo, self.output_hidden_weight_wo, self.output_bias_bo
+        return 'output', self.output_input_weight_wo, self.output_hidden_weight_wo, self.output_bias_bo
 
 
