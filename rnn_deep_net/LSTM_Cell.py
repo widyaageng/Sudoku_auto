@@ -49,19 +49,18 @@ class LSTMCell:
         self.activated_input_it = activated_input_it
         self.activated_output_ot = activated_output_ot
 
-    # def dim_check(wrapped_function):
-    #     def check_dim():
-    #         try:
-    #             assert (np.shape(wrapped_function()[2])[1] == np.shape(wrapped_function[0].current_input)[0])
-    #             assert (np.shape(wrapped_function()[3])[1] == np.shape(wrapped_function[0].previous_hidden)[0])
-    #             assert (np.shape(wrapped_function()[4])[1] == np.shape(wrapped_function()[2])[0])
-    #             wrapped_function()
-    #         except AssertionError:
-    #             print('Dimension mismatch in %s constructor!' % wrapped_function()[1])
-    #     return check_dim()
-    #
-    #
-    # @dim_check
+    def dim_check(self, wrapped_function):
+        def check_dim():
+            try:
+                assert (np.shape(wrapped_function()[2])[1] == np.shape(wrapped_function[0].current_input)[0])
+                assert (np.shape(wrapped_function()[3])[1] == np.shape(wrapped_function[0].previous_hidden)[0])
+                assert (np.shape(wrapped_function()[4])[1] == np.shape(wrapped_function()[2])[0])
+                wrapped_function()
+            except AssertionError:
+                print('Dimension mismatch in %s constructor!' % wrapped_function()[1])
+        return check_dim()
+
+    @dim_check
     def get_forget_weight(self):
         return self, 'forget', self.forget_input_weight_wf, self.forget_hidden_weight_uf, self.forget_bias_bf
 
