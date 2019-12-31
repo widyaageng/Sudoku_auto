@@ -5,25 +5,21 @@ import numpy as np
 fget_inweight = np.ones((3, 1))
 fget_hidweight = np.ones((3, 1))
 fget_bias = 1
-
 iget_inweight = np.ones((3, 1))
-fget_hidweight = np.ones((3, 1))
-fget_bias = 1
+iget_hidweight = np.ones((3, 1))
+iget_bias = 1
+oget_inweight = np.ones((3, 1))
+oget_hidweight = np.ones((3, 1))
+oget_bias = 1
+pstate = 1
+cstate = 1
+phid = 1
+chid = 1
+cin = 1
+fget_act = 'tanh'
+iget_act = 'tanh'
+oget_act = 'sigmoid'
 
-forget_input_weight_wf,
-forget_hidden_weight_uf,
-forget_bias_bf,
-input_input_weight_wi,
-input_hidden_weight_ui,
-input_bias_bi,
-output_input_weight_wo,
-output_hidden_weight_wo,
-output_bias_bo,
-previous_state,
-current_state,
-previous_hidden,
-current_hidden,
-current_input,
-activated_forget_ft,
-activated_input_it,
-activated_output_ot,
+testlstm = LSTM_Cell.LSTMCell(fget_inweight, fget_hidweight, fget_bias, iget_inweight, iget_hidweight, iget_bias, oget_inweight, oget_hidweight, oget_bias, pstate, cstate, phid, chid, cin, fget_act, iget_act, oget_act)
+forget_weight = testlstm.get_forget_weight()
+print(forget_weight[5])
