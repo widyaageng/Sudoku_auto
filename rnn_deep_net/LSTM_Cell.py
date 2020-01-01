@@ -1,5 +1,6 @@
 import numpy as np
 import functools
+import wrapt
 
 
 class LSTMCell:
@@ -31,7 +32,7 @@ class LSTMCell:
             activated_input_it,
             activated_output_ot,
     ):
-        self.forget_input_weight_wf = forget_input_weight_wf
+        self.forget_input_weight_wf = forget_input_weight_wf if type(forget_input_weight_wf) == np.ndarray else 
         self.forget_hidden_weight_uf = forget_hidden_weight_uf
         self.forget_bias_bf = forget_bias_bf
         self.input_input_weight_wi = input_input_weight_wi
@@ -49,15 +50,17 @@ class LSTMCell:
         self.activated_input_it = activated_input_it
         self.activated_output_ot = activated_output_ot
 
-    def dim_check(self, wrapped_function):
+    @wrapt.decorator()
+    def dim_check(wrapped, instance, args, kwargs):
         def check_dim():
             try:
-                assert (np.shape(wrapped_function()[2])[1] == np.shape(wrapped_function[0].current_input)[0])
-                assert (np.shape(wrapped_function()[3])[1] == np.shape(wrapped_function[0].previous_hidden)[0])
-                assert (np.shape(wrapped_function()[4])[1] == np.shape(wrapped_function()[2])[0])
-                wrapped_function()
+                dumptest = wrapped()
+                assert (np.shape(wrapped()[2])[1] == np.shape(wrapped()[0].current_input)[0])
+                assert (np.shape(wrapped()[3])[1] == np.shape(wrapped()[0].previous_hidden)[0])
+                assert (np.shape(wrapped()[4])[1] == np.shape(wrapped()[2])[0])
+                return wrapped(*args, **kwargs)
             except AssertionError:
-                print('Dimension mismatch in %s constructor!' % wrapped_function()[1])
+                print('Dimension mismatch in %s constructor!' % wrapped()[1])
         return check_dim()
 
     @dim_check
